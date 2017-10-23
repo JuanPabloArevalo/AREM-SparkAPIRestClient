@@ -1,11 +1,34 @@
-
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"></meta>
-    <title>Hello world</title>
-</head>
-<body>
-<p th:inline="text">Hello, [[${name}]]!</p>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/apiclient.js"></script>
+        <script src="js/app.js"></script>
+        <title>Cuadrado</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-0 col-sm-1 col-md-2 col-lg-2"></div>
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+                    <h3>Numeros cuadrados</h3>
+                    <div class="well">
+                        <div class="form-group">
+                            <label for="longitud">Numero</label>
+                            <input type="text" class="form-control" id="idNumero">
+                        </div>
+                        <div class="form-group">
+                            <label for="latitud">Su cuadrado:</label>
+                            <input type="text" class="form-control" id="idCuadrado" disabled="">
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" id="idBtnLocalizar" onclick="app.getCuadrado()">Enviar</button>
+                    </div>
+                </div> 
+                <div class="col-xs-0 col-sm-1 col-md-2 col-lg-2"></div>
+            </div>
+        </div>  
+    </body>
 </html>

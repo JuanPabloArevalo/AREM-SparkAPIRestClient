@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var apiclientConsultarMapa=(function(){
+
+var apiclient=(function(){
 	return {
-            getAllReportesPublicados(callback){
-                return $.get("/sharingweather/V1/reporteClima/publicados",callback); 
+            getCuadrado(numero,callback){
+                return $.get("https://nameless-woodland-75107.herokuapp.com/cuadrado/"+numero,callback); 
             }
 	};	
 
