@@ -17,8 +17,7 @@ public class Main {
         staticFiles.location("/static");
         get("/", (req, res) -> {
             res.type("text/html");
-            res.redirect("index.html");
-            return "";
+            return "index";
         });
     }
 
