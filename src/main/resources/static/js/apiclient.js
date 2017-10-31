@@ -6,8 +6,12 @@
 
 var apiclient=(function(){
 	return {
-            getCuadrado(numero,callback){
-                return $.get("https://nameless-woodland-75107.herokuapp.com/cuadrado/"+numero,callback); 
+            getCuadradoPOST(numero){
+                return $.ajax({
+                    url: "https://756w45fq6d.execute-api.us-west-2.amazonaws.com/cuadrado",
+                    type: 'POST',
+                    data: '{"numero":'+numero+'}'
+                });
             }
 	};	
 
