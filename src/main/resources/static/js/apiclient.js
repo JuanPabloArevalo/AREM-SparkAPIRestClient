@@ -8,7 +8,7 @@ var apiclient=(function(){
 	return {
             getCuadradoPOST(numero){
                 return $.ajax({
-                    url: "https://756w45fq6d.execute-api.us-west-2.amazonaws.com/cuadrado",
+                    url: "https://jyyg7rj388.execute-api.us-west-2.amazonaws.com/prod/CUADRADO",
                     type: 'POST',
                     data: '{"numero":'+numero+'}'
                 });
