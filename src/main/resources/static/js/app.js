@@ -5,10 +5,10 @@ var app = (function(){
             var promesa = apiclient.getCuadradoPOST(numero);
             promesa.then(
                         function (retorno) {
-                            alert(retorno.numero);
+                            document.getElementById("idCuadrado").value = retorno.numero;
                         },
                         function () {
-                             alert(promesa.responseText);
+                            alert("Ha ocurrido un error");
                         }
                 );
         }
